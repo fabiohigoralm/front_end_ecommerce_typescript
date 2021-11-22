@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Header } from "./App.styles";
+import { ProductList } from "./components/ProductList";
+import icon_b8one from "./icon/b8one_icon.svg"
+import icon_type from "./icon/typescript_react_100px.png"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () =>{
+  const img_b8one = <img src={icon_b8one} alt="logo b8one" />;
+  const img_type = <img src={icon_type} alt="logo react + typeScript" />;
+  return(
+    <>
+    <Header>{img_b8one}{img_type}</Header>
+     <Container>
+       <ProductList />
+     </Container>
+    </>
+  )
 }
 
 export default App;
